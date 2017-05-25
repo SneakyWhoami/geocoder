@@ -64,7 +64,7 @@ Class GeoCode {
         $scale = pow(cos($lat * pi() / 180), 2);
         
         
-        $sql = 'SELECT * FROM everything WHERE id IN (
+        $sql = 'SELECT name, admin2_name, admin1_name FROM everything WHERE id IN (
             SELECT feature_id
             FROM coordinates
             WHERE latitude BETWEEN :lat - 1.5 AND :lat + 1.5
