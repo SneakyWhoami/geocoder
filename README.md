@@ -28,7 +28,7 @@ $db = new PDO('sqlite:test.sqlite');
 var_dump(GeoCode::get(-40.877739, 175.01425, $db));
 var_dump(GeoCode::get('-41.458345', '172.812571', $db));
 // easy as that
-// output is like array('name' => 'Rolleston', 'admin2' => 'Selwyn District', 'admin1' => 'Canterbury');
+// output is like array('name' => 'Rolleston', 'admin2_name' => 'Selwyn District', 'admin1_name' => 'Canterbury');
 ```
 You may only be interested in the database and not the PHP bit. That makes sense. You might want to do subselects on insertions, or use another language for your main logic, or whatever. That's cool too.
 
